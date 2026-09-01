@@ -61,7 +61,7 @@ export default function AdminHome() {
                 fontWeight: 700,
               }}
             >
-              Sweet Cravings
+              Divya’s Bakes
             </div>
 
             <div

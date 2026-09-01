@@ -68,7 +68,7 @@ export default async function Home()  {
         <section className="section" id="gallery">
           <div className="section-heading">
             <h2>Made for <span>Special Moments</span></h2>
-            <p>Replace this section with your friend's real cake gallery later.</p>
+            <p>Replace this section with real cake gallery later.</p>
           </div>
           <div className="products">
             {products?.map((product) => (
