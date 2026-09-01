@@ -1,4 +1,4 @@
-import Image from "next/image";
+"use client";
 
 type Product = {
   id: string;
@@ -14,6 +14,33 @@ export default function ProductCard({
 }: {
   product: Product;
 }) {
+  function orderOnWhatsApp() {
+    const whatsappNumber =
+      process.env.NEXT_PUBLIC_WHATSAPP_NUMBER;
+
+    if (!whatsappNumber) {
+      alert("WhatsApp number is not configured.");
+      return;
+    }
+
+   const message = `Hi Divya's Bakes! 👋
+
+I would like to place an order.
+
+🍰 Cake: ${product.name}
+💰 Price: ₹${product.price}
+
+Please let me know the availability and order details.
+
+Thank you! 😊`;
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
+  }
+
   return (
     <div
       style={{
@@ -24,7 +51,6 @@ export default function ProductCard({
       }}
     >
       {/* IMAGE */}
-
       <div
         style={{
           position: "relative",
@@ -34,33 +60,32 @@ export default function ProductCard({
         }}
       >
         {product.image_url ? (
-  <img
-    src={product.image_url}
-    alt={product.name}
-    style={{
-      width: "100%",
-      height: "260px",
-      objectFit: "cover",
-      display: "block",
-    }}
-  />
-) : (
-  <div
-    style={{
-      height: "260px",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      fontSize: 50,
-    }}
-  >
-    🍰
-  </div>
-)}
+          <img
+            src={product.image_url}
+            alt={product.name}
+            style={{
+              width: "100%",
+              height: "260px",
+              objectFit: "cover",
+              display: "block",
+            }}
+          />
+        ) : (
+          <div
+            style={{
+              height: "260px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: 50,
+            }}
+          >
+            🍰
+          </div>
+        )}
       </div>
 
       {/* CONTENT */}
-
       <div style={{ padding: 20 }}>
         <p
           style={{
@@ -111,6 +136,8 @@ export default function ProductCard({
           </strong>
 
           <button
+            type="button"
+            onClick={orderOnWhatsApp}
             style={{
               background: "#e95f8c",
               border: 0,
