@@ -8,7 +8,7 @@ type Offer = {
   title: string;
   description: string | null;
   button_text: string | null;
-  active: boolean;
+  
 };
 
 export default function Navbar() {
@@ -21,11 +21,11 @@ export default function Navbar() {
       const supabase = createClient();
 
       const { data, error } = await supabase
-        .from("offers")
-        .select("title, description, button_text, active")
-        .eq("active", true)
-        .limit(1)
-        .maybeSingle();
+  .from("offers")
+  .select("title, description, button_text")
+  .order("created_at", { ascending: false })
+  .limit(1)
+  .maybeSingle();
 
       if (error) {
         console.error("Error fetching offer:", error);

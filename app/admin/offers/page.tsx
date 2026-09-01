@@ -120,6 +120,7 @@ export default function AdminOffers() {
   image_url: imageUrl,
   start_date: startDate || null,
   end_date: endDate || null,
+  active: true,
 });
 
       if (error) {
