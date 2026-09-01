@@ -3,7 +3,6 @@
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
-export const dynamic = "force-dynamic";
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -42,11 +41,11 @@ export default function AdminLoginPage() {
         <div className="login-logo">♨</div>
 
         <div className="logo-script">
-          Sweet Cravings
+          Divya’s Bakes
         </div>
 
         <div className="logo-sub">
-          BAKERY ADMIN
+          ADMIN PANEL
         </div>
 
         <h1>Welcome Back</h1>
