@@ -136,15 +136,12 @@ export default function OfferPopup() {
           {/* WHATSAPP */}
 
           <a
-            className="wa-btn"
-            href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}?text=${encodeURIComponent(
-    `Hi! I want to know about the ${offer.title} offer.`
-            )}`}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {offer.button_text || "Order Now →"}
-          </a>
+  className="wa-btn"
+  href="#cakes"
+  onClick={close}
+>
+  {offer.button_text || "View Cakes →"}
+</a>
 
         </div>
       </div>

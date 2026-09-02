@@ -4,7 +4,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
-export const dynamic = "force-dynamic";
+
 
 type Offer = {
   id: string;
@@ -113,15 +113,15 @@ export default function AdminOffers() {
       //   }
       // }
 
-      const { error } = await supabase.from("offers").insert({
-  title: title.trim(),
-  description: description.trim(),
-  button_text: buttonText.trim() || "Order on WhatsApp",
-  image_url: imageUrl,
-  start_date: startDate || null,
-  end_date: endDate || null,
-  active: true,
-});
+        const { error } = await supabase.from("offers").insert({
+          title: title.trim(),
+          description: description.trim(),
+          button_text: buttonText.trim() || "Order on WhatsApp",
+          image_url: imageUrl,
+           start_date: startDate || null,
+          end_date: endDate || null,
+           active: true,
+        });
 
       if (error) {
         throw error;

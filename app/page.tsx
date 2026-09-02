@@ -4,6 +4,7 @@ import OfferPopup from "@/components/offer-popup";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 //import { demoProducts } from "@/lib/demo-data";
 import { createClient } from "@/lib/supabase/server";
+import Footer from "@/components/footer";
 
 export default async function Home()  {
   const supabase = await createClient();
@@ -95,10 +96,7 @@ export default async function Home()  {
         </section>
       </main>
 
-      <footer className="footer" id="contact">
-        <div><strong>Divya’s Bakes</strong><br />Freshly baked with love.</div>
-        <div>WhatsApp: +91 99999 99999<br />Instagram: @sweetcravings</div>
-      </footer>
+      <Footer/>
 
       <OfferPopup />
     </>

@@ -95,7 +95,7 @@ export default function AdminHome() {
               borderRadius: 9,
             }}
           >
-            🌐 View Website
+             View Website
           </Link>
 
           <LogoutButton />
@@ -126,7 +126,7 @@ export default function AdminHome() {
               marginBottom: 10,
             }}
           >
-            Welcome back 👋
+            Welcome back !
           </div>
 
           <h1
@@ -262,7 +262,7 @@ export default function AdminHome() {
                   fontWeight: 700,
                 }}
               >
-                Manage Cakes →
+                Manage Products →
               </div>
             </Link>
 
@@ -459,8 +459,8 @@ export default function AdminHome() {
             flexWrap: "wrap",
           }}
         >
-          <span>Sweet Cravings Bakery Admin</span>
-          <span>Made with ♡</span>
+          <span>Divya’s Bakes Admin</span>
+          <span>Made with ❤️</span>
         </footer>
       </div>
     </main>
