@@ -36,7 +36,7 @@ export default async function Home()  {
             </div>
           </div>
           <div className="hero-image-wrap">
-            <img className="hero-image" src="/images/hero-cake.jpg" alt="Chocolate celebration cake" />
+            <img className="hero-image" src="/images/divyas-bakes-logo.png" alt="Chocolate celebration cake" />
           </div>
         </section>
 
